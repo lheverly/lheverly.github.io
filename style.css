@@ -11,7 +11,7 @@ body {
 /* Header section takes up the full screen */
 /* Header styles */
 header {
-    background-image: url('header-background.jpg'); /* Path to your image */
+    background-image: url('website-photo.jpg'); /* Path to your image */
     background-size: cover; /* Make sure the image covers the entire header */
     background-position: center; /* Center the image */
     color: #fff;
