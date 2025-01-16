@@ -7,37 +7,32 @@
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-
-    <!-- Header -->
     <header>
         <h1>Welcome to Lucas Heverly's Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>About Me</li>
+                <li>Projects</li>
+                <li>Certifications</li>
+                <li>Contact</li>
             </ul>
         </nav>
     </header>
 
-    <!-- Sections -->
-    <section>
-        <!-- About Me Bubble -->
+    <section id="about">
         <div class="bubble">
             <p>About Me</p>
             <div class="bubble-content">
-                <button class="close-btn">X</button>
                 <h2>About Me</h2>
                 <p>Hi, I'm Lucas Heverly, a 24-year-old with a strong foundation in economic studies and a passion for uncovering business insights using data. Welcome to my personal website where you can explore my work and achievements.</p>
             </div>
         </div>
+    </section>
 
-        <!-- Projects Bubble -->
+    <section id="projects">
         <div class="bubble">
             <p>Projects</p>
             <div class="bubble-content">
-                <button class="close-btn">X</button>
                 <h2>Projects</h2>
                 <ul>
                     <li><a href="https://github.com/username/project1" target="_blank">Project 1</a>: A brief description of the project.</li>
@@ -45,28 +40,25 @@
                 </ul>
             </div>
         </div>
+    </section>
 
-        <!-- Certifications Bubble -->
+    <section id="certifications">
         <div class="bubble">
             <p>Certifications</p>
             <div class="bubble-content">
-                <button class="close-btn">X</button>
                 <h2>Certifications</h2>
                 <ul>
                     <li>Data Analytics Essentials - Issued by The University of Texas at Austin</li>
                 </ul>
                 <img src="ut-dae-certificate.jpg" alt="Certification Image" style="width: 300px; height: auto; margin-top: 20px;">
-                <ul>
-                    <li>[Certification Name] - Issued by [Organization]</li>
-                </ul>
             </div>
         </div>
+    </section>
 
-        <!-- Contact Bubble -->
+    <section id="contact">
         <div class="bubble">
             <p>Contact</p>
             <div class="bubble-content">
-                <button class="close-btn">X</button>
                 <h2>Contact</h2>
                 <p>Email: <a href="mailto:lucasheverly9@gmail.com">lucasheverly9@gmail.com</a></p>
                 <p>LinkedIn: <a href="https://www.linkedin.com/in/lucasheverly/" target="_blank">linkedin.com/in/lucasheverly</a></p>
@@ -75,30 +67,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Lucas Heverly. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        // JS to toggle the bubble content when the bubble itself is clicked
-        document.querySelectorAll('.bubble').forEach(bubble => {
-            bubble.addEventListener('click', function(e) {
-                // Prevent the event from firing when clicking inside the bubble content
-                if (e.target !== this && !e.target.classList.contains('close-btn')) {
-                    bubble.classList.toggle('active');
-                }
-            });
-        });
-
-        // JS to close the content when the close button is clicked
-        document.querySelectorAll('.close-btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                // Prevent the event from bubbling up
-                e.stopPropagation();
-                this.parentElement.parentElement.classList.remove('active');
-            });
-        });
-    </script>
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
