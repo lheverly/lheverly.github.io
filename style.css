@@ -1,6 +1,6 @@
 /* Base styles for body and layout */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Changed font to Roboto */
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -8,7 +8,8 @@ body {
     color: #fff;
 }
 
-/* Header section */
+/* Header section takes up the full screen */
+/* Header styles */
 header {
     background: #333;
     color: #fff;
@@ -21,20 +22,22 @@ header {
     position: relative;
 }
 
+/* Name styling */
 header h1 {
-    font-size: 4rem;
+    font-size: 4rem; /* Increased size for emphasis */
     margin: 0;
     font-weight: 500;
 }
 
+/* Subheader styling */
 header h2 {
     font-size: 1.5rem;
     margin-top: 10px;
     font-weight: 400;
-    color: #ff6347;
+    color: #ff6347; /* Optional color for the subheader */
 }
 
-/* Navigation */
+/* Navigation styling */
 nav {
     position: absolute;
     top: 20px;
@@ -54,17 +57,17 @@ nav ul {
 }
 
 nav ul li {
+    cursor: pointer;
     font-size: 1rem;
     color: #fff;
     transition: color 0.3s ease;
-    cursor: pointer;
 }
 
 nav ul li:hover {
     color: #ff6347;
 }
 
-/* Bubble styling */
+/* Bubble section style */
 .bubble {
     margin: 50px 0;
     background-color: #2a2d34;
@@ -75,6 +78,7 @@ nav ul li:hover {
     transition: all 0.3s ease;
 }
 
+/* Hover effect for bubbles */
 .bubble:hover {
     transform: scale(1.05);
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
@@ -86,46 +90,48 @@ nav ul li:hover {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* When section is in view */
 .bubble-content.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Remove bullet points */
-ul {
-    list-style: none;
-    padding-left: 0;
+/* Section styles */
+section {
+    padding: 40px;
+    margin: 20px;
+}
+
+/* Links styling */
+a {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
     margin: 0;
 }
 
-/* Visualizer */
-.visualizer {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    pointer-events: none;
-    animation: float 10s infinite ease-in-out;
+/* Smooth scroll for the page */
+html {
+    scroll-behavior: smooth;
 }
 
-.visualizer:nth-child(2n) {
-    animation-duration: 8s;
-    background-color: rgba(255, 99, 71, 0.2);
-}
-
-.visualizer:nth-child(3n) {
-    animation-duration: 12s;
-    background-color: rgba(70, 130, 180, 0.2);
-}
-
-/* Floating animation */
-@keyframes float {
-    0% {
-        transform: translateY(0) translateX(0) scale(1);
-    }
-    50% {
-        transform: translateY(-50px) translateX(50px) scale(1.2);
-    }
-    100% {
-        transform: translateY(0) translateX(0) scale(1);
-    }
+/* Remove bullet points from lists */
+ul {
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 0; /* Removes left padding */
+    margin: 0; /* Removes margin */
 }
