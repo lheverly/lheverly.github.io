@@ -81,18 +81,22 @@
     </footer>
 
     <script>
-        // JS to toggle the bubble content when clicked
+        // JS to toggle the bubble content when the bubble itself is clicked
         document.querySelectorAll('.bubble').forEach(bubble => {
-            bubble.addEventListener('click', () => {
-                bubble.classList.toggle('active');
+            bubble.addEventListener('click', function(e) {
+                // Prevent the event from firing when clicking inside the bubble content
+                if (e.target !== this && !e.target.classList.contains('close-btn')) {
+                    bubble.classList.toggle('active');
+                }
             });
         });
 
-        // JS to close the content when close button is clicked
+        // JS to close the content when the close button is clicked
         document.querySelectorAll('.close-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
+            button.addEventListener('click', function(e) {
+                // Prevent the event from bubbling up
                 e.stopPropagation();
-                button.parentElement.parentElement.classList.remove('active');
+                this.parentElement.parentElement.classList.remove('active');
             });
         });
     </script>
