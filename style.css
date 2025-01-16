@@ -67,11 +67,6 @@ nav ul li:hover {
     color: #ff6347;
 }
 
-
-nav ul li:hover {
-    color: #ff6347;
-}
-
 /* Bubble section style */
 .bubble {
     margin: 50px 0;
@@ -132,4 +127,11 @@ footer p {
 /* Smooth scroll for the page */
 html {
     scroll-behavior: smooth;
+}
+
+/* Remove bullet points from lists */
+ul {
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 0; /* Removes left padding */
+    margin: 0; /* Removes margin */
 }
