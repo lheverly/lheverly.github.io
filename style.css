@@ -25,11 +25,11 @@ header {
 
 /* Set specific images for left and right */
 .header-left {
-    background-image: url('left-photo.jpg'); /* Path to your first image */
+    background-image: url('website-photo.jpg'); /* Path to your first image */
 }
 
 .header-right {
-    background-image: url('right-photo.jpg'); /* Path to your second image */
+    background-image: url('website-photo2.jpg'); /* Path to your second image */
 }
 
 /* Middle section contains the text */
