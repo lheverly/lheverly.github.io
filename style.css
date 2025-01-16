@@ -71,6 +71,24 @@ header h2 {
     color: #ff6347; /* Optional color for the subheader */
 }
 
+/* Resume button styling */
+.resume-button {
+    display: inline-block;
+    margin-top: 20px; /* Adds spacing from the sub-header */
+    padding: 10px 20px;
+    background-color: #444; /* Same as nav background */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #ff6347; /* Matches nav hover effect */
+    color: #fff;
+}
+
 /* Navigation styling */
 nav {
     position: absolute;
