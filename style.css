@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Reset and Body Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,119 +7,121 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7fb; /* Light background color */
-    color: #333; /* Dark text color for readability */
+    background-color: #121212; /* Dark background for a futuristic look */
+    color: #fff; /* Light text color */
     line-height: 1.6;
     font-size: 16px;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-h1, h2, h3 {
-    font-family: 'Helvetica', sans-serif;
-    font-weight: 600;
-    color: #2d2d2d;
-}
-
-/* Header Styles */
+/* Header */
 header {
-    background: #0078d4; /* Professional blue color */
-    color: #fff;
-    padding: 20px 0;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 3em;
+    color: #00ffcc; /* Futuristic neon color */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.8); /* Glowing effect */
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #ffbc00; /* Hover effect */
-}
-
-/* Section Styles */
+/* Section Containers */
 section {
-    margin-top: 40px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-section h2 {
-    font-size: 2em;
-    color: #0078d4; /* Header color matching the theme */
-    margin-bottom: 20px;
-}
-
-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-section ul li {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-}
-
-section p {
-    margin-bottom: 15px;
-    line-height: 1.8;
-}
-
-a {
-    color: #0078d4;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #ffbc00;
-}
-
-/* Image Styles */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-/* Footer Styles */
-footer {
-    background: #333;
+/* Bubble Styling */
+.bubble {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(145deg, #00ffcc, #0066ff); /* Neon gradient */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
-    padding: 15px;
-    text-align: center;
-    margin-top: 40px;
-    font-size: 1em;
-    border-radius: 8px;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
+    font-size: 1.5em;
     font-weight: bold;
-    transition: color 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    margin: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.3), 0 0 30px rgba(0, 255, 204, 0.5);
 }
 
-footer a:hover {
-    color: #ffbc00;
+/* Hover Effects on Bubbles */
+.bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 255, 204, 0.5), 0 0 50px rgba(0, 255, 204, 0.8);
+    background: linear-gradient(145deg, #ff0066, #00ccff); /* Change color on hover */
+}
+
+/* Section Details (Initially Hidden) */
+.bubble-content {
+    display: none;
+    background: #222;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    z-index: 1;
+    color: #fff;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show the bubble content when clicked */
+.bubble.active .bubble-content {
+    display: block;
+    opacity: 1;
+}
+
+/* Styling for Close Button */
+.bubble-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff0066;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.bubble-content .close-btn:hover {
+    background: #ff0033;
+}
+
+/* Footer */
+footer {
+    background: #121212;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
