@@ -1,6 +1,6 @@
 /* Base styles for body and layout */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Changed font to Roboto */
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -8,34 +8,54 @@ body {
     color: #fff;
 }
 
-/* Header section */
+/* Header section takes up the full screen */
 header {
     background: #333;
     color: #fff;
-    padding: 1rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    z-index: 10;
+    font-weight: 500; /* Making the title a bit bold */
+}
+
+/* Navigation links in a small box */
+nav {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    gap: 20px;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
 nav ul li:hover {
-    color: #ff6347; /* Hover color */
+    color: #ff6347;
 }
 
 /* Bubble section style */
