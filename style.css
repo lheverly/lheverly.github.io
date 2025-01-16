@@ -9,19 +9,38 @@ body {
 }
 
 /* Header section takes up the full screen */
-/* Header styles */
 header {
-    background-image: url('website-photo.jpg'); /* Path to your image */
-    background-size: cover; /* Make sure the image covers the entire header */
-    background-position: center; /* Center the image */
-    color: #fff;
+    display: flex;
+    justify-content: space-between;
     height: 100vh;
+    position: relative;
+}
+
+/* Left and right thirds will have the images */
+.header-left, .header-right {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Set specific images for left and right */
+.header-left {
+    background-image: url('left-photo.jpg'); /* Path to your first image */
+}
+
+.header-right {
+    background-image: url('right-photo.jpg'); /* Path to your second image */
+}
+
+/* Middle section contains the text */
+.header-middle {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
+    background-color: transparent; /* No background image */
 }
 
 /* Optional: Add a slight dark overlay to make the text more readable */
@@ -41,6 +60,7 @@ header h1 {
     font-size: 4rem; /* Increased size for emphasis */
     margin: 0;
     font-weight: 500;
+    z-index: 1; /* Ensure the text appears on top of the background image */
 }
 
 /* Subheader styling */
